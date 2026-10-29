@@ -8,7 +8,7 @@ Open https://kcgroulx.github.io/halloween-bingo/ after GitHub Pages deployment. 
 
 ## Edit challenges
 
-Edit `challenges.js` in GitHub and commit to `main`. Keep exactly 24 entries and retain their IDs when changing wording so saved progress is preserved. Entries run left-to-right, top-to-bottom, with the free center inserted automatically. Edits publish through GitHub Pages. Changing an ID makes that challenge a new, unchecked challenge.
+Edit `challenges.js` in GitHub and commit to `main`. Each challenge has a short `label` for its square tile and full `text` shown below the card when tapped. Keep labels to two or three short words so they fit on phones. Keep exactly 24 entries and retain their IDs when changing wording so saved progress is preserved. Entries run left-to-right, top-to-bottom, with the free center inserted automatically. Edits publish through GitHub Pages. Changing an ID makes that challenge a new, unchecked challenge.
 
 ## Preview and test
 

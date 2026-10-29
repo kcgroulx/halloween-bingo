@@ -17,16 +17,15 @@
     <img class="corner bottom-left" src="./assets/corner.svg" alt="">
     <img class="corner bottom-right" src="./assets/corner.svg" alt="">
     <header>
-      <p class="eyebrow">You are cordially dared.</p>
       <div class="crest" aria-hidden="true"><span></span><img src="./assets/bat.svg" alt=""><span></span></div>
       <h1><span class="house">3951</span><span class="halloween">Halloween</span><span class="bingo">Bingo</span></h1>
       <p class="tagline">A little mischief. Five in a row.</p>
     </header>
     <section class="game" aria-label="Your bingo card">
-      <div class="card-heading"><span>Your card for the evening</span><span aria-hidden="true">✦</span></div>
       <p class="instructions" id="instructions">Tap a deed when it’s done. A row, column, or diagonal wins.</p>
       <div class="letters" aria-hidden="true"><span>B</span><span>I</span><span>N</span><span>G</span><span>O</span></div>
       <div id="board" class="board" aria-describedby="instructions"></div>
+      <p id="challenge-detail" class="challenge-detail" aria-live="polite">Tap a square to mark it done and see the full challenge here.</p>
       <noscript><p>Enable JavaScript to play and save your bingo card.</p></noscript>
       <div class="progress" aria-live="polite" aria-atomic="true"><span id="deed-count">0 / 24 deeds done</span><span id="line-count">0 bingos</span></div>
       <div class="progress-track" aria-hidden="true"><div id="progress-fill"></div></div>

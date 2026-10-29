@@ -22,11 +22,14 @@ const tiles = card.map((challenge, index) => {
     const number = document.createElement('span');
     number.className = 'number'; number.textContent = String(index + 1).padStart(2, '0'); number.setAttribute('aria-hidden', 'true');
     const tick = document.createElement('span'); tick.className = 'check'; tick.textContent = '✓'; tick.setAttribute('aria-hidden', 'true');
-    const label = document.createElement('span'); label.textContent = challenge.text;
+    const label = document.createElement('span'); label.textContent = challenge.label || challenge.text;
+    tile.setAttribute('aria-label', challenge.text);
+    tile.title = challenge.text;
     tile.append(number, tick, label);
     tile.addEventListener('click', () => {
       checked.has(challenge.id) ? checked.delete(challenge.id) : checked.add(challenge.id);
       save(); render(true);
+      $('challenge-detail').textContent = `${checked.has(challenge.id) ? 'Done' : 'Unchecked'}: ${challenge.text}.`;
     });
   }
   $('board').append(tile);
@@ -61,6 +64,7 @@ $('reset').addEventListener('click', () => $('reset-dialog').showModal());
 $('reset-dialog').addEventListener('close', () => {
   if ($('reset-dialog').returnValue !== 'reset') return;
   checked.clear();
+  $('challenge-detail').textContent = 'Tap a square to mark it done and see the full challenge here.';
   try { localStorage.removeItem(STORAGE_KEY); } catch { canSave = false; }
   clearTimeout(celebrationTimer); $('celebration').hidden = true; render();
 });
