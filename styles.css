@@ -58,3 +58,6 @@ dialog { color: var(--ink); background: #e35b4b; border: 1px solid var(--ink); p
 .rules { margin: 20px 0 0; }
 .rules h2 { font-size: 17px; font-weight: 400; margin: 0 0 9px; }
 .rules ul { display: inline-block; text-align: left; margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.5; }
+
+/* Keep the selected full-length challenges inside square tiles on narrow phones. */
+@media (max-width: 359px) { .tile:not(.free) { font-size: 7px; line-height: 1.08; } }

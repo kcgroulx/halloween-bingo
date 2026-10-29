@@ -19,10 +19,11 @@ test('overlapping lines and a full card count correctly', () => {
   assert.equal(winningLines(card, new Set()).length, 0);
 });
 test('storage round trips, rejects invalid data and drops obsolete IDs', () => {
-  const checked = new Set(['meet', 'photo']);
+  const [first, second] = challenges.map(c => c.id);
+  const checked = new Set([first, second]);
   assert.deepEqual(readProgress(serializeProgress(checked), challenges), checked);
   for (const raw of [null, '', '{bad', '{}', 'null', '{"version":2,"checked":["meet"]}', '{"version":1,"checked":{}}']) assert.equal(readProgress(raw, challenges).size, 0);
-  assert.deepEqual(readProgress('{"version":1,"checked":["meet","meet","removed","free",null]}', challenges), new Set(['meet']));
+  assert.deepEqual(readProgress(JSON.stringify({version: 1, checked: [first, first, 'removed', 'free', null]}), challenges), new Set([first]));
   assert.deepEqual(readProgress(serializeProgress(checked), challenges.map(c => ({...c, text:'Updated'}))), checked);
 });
 test('card protects the free center and validates author edits', () => {
