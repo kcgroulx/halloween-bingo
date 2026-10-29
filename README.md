@@ -28,4 +28,4 @@ The only stored record is `3951-halloween-bingo:v1` in localStorage: `{ "version
 
 ## Artwork
 
-The bat and corner ornaments are original inline-vector assets created for this project. The paper grain is an embedded SVG filter. No remote images or fonts are loaded.
+The bat and corner ornaments are original inline-vector assets created for this project. The paper grain is an embedded SVG filter. Libre Baskerville is bundled locally in regular and bold weights and used throughout the interface. Its SIL Open Font License is in `assets/fonts/OFL.txt`. No remote images or fonts are loaded.
