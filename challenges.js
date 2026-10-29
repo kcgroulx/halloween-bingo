@@ -1,0 +1,28 @@
+// Edit the text below to change the party card. Keep IDs stable to preserve progress.
+// The order is left to right, top to bottom; the free center is inserted automatically.
+export const challenges = [
+  { id: 'meet', text: 'Meet someone new' },
+  { id: 'pickup', text: 'Deliver a terrible pickup line' },
+  { id: 'photo', text: 'Take a group costume photo' },
+  { id: 'circle', text: 'Start a dance circle' },
+  { id: 'compliment', text: 'Admire three costumes' },
+  { id: 'villain', text: 'Give a villain speech' },
+  { id: 'toast', text: 'Toast with someone new' },
+  { id: 'matching', text: 'Find a matching costume theme' },
+  { id: 'story', text: 'Tell a spooky story' },
+  { id: 'dance', text: 'Challenge someone to a dance-off' },
+  { id: 'trick', text: 'Learn someone’s party trick' },
+  { id: 'laugh', text: 'Get someone to do an evil laugh' },
+  { id: 'pose', text: 'Recreate a horror movie pose' },
+  { id: 'drink', text: 'Invent a spooky drink name' },
+  { id: 'sing', text: 'Sing a chorus with someone' },
+  { id: 'nickname', text: 'Get a spooky nickname' },
+  { id: 'backstory', text: 'Give your costume a dramatic backstory' },
+  { id: 'rps', text: 'Play rock-paper-scissors with three people' },
+  { id: 'birthday', text: 'Find someone with your birth month' },
+  { id: 'runway', text: 'Strike a dramatic runway pose' },
+  { id: 'vampire', text: 'Convince someone you’re a vampire' },
+  { id: 'joke', text: 'Exchange your cheesiest jokes' },
+  { id: 'hosts', text: 'Lead a toast to the hosts' },
+  { id: 'ghost', text: 'Make someone laugh as a ghost' },
+];

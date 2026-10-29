@@ -1,0 +1,6 @@
+{
+  "name": "3951-halloween-bingo",
+  "private": true,
+  "type": "module",
+  "scripts": { "test": "node --test", "start": "python3 -m http.server 3951 --bind 127.0.0.1" }
+}
