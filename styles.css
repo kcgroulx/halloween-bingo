@@ -54,3 +54,7 @@ dialog { color: var(--ink); background: #e35b4b; border: 1px solid var(--ink); p
 /* Match option C's optical sizing while keeping complete instructions in each square. */
 .tile:not(.free) { font-size: 13px; }
 @media (max-width: 600px) { .tile:not(.free) { font-size: clamp(8px, 2.3vw, 13px); line-height: 1.1; padding: 7px 2px 2px; } }
+
+.rules { margin: 20px 0 0; }
+.rules h2 { font-size: 17px; font-weight: 400; margin: 0 0 9px; }
+.rules ul { display: inline-block; text-align: left; margin: 0; padding-left: 18px; font-size: 13px; line-height: 1.5; }

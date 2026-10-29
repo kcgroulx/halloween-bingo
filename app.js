@@ -49,8 +49,8 @@ function render(celebrate = false) {
   $('deed-count').textContent = `${checked.size} / 24 deeds done`;
   $('line-count').textContent = `${wins.length} ${wins.length === 1 ? 'bingo' : 'bingos'}`;
   $('progress-fill').style.width = `${checked.size / 24 * 100}%`;
-  $('storage-note').textContent = canSave ? 'Your deeds are saved on this browser.' : 'Saving is unavailable. Keep this tab open to retain your progress.';
-  $('storage-note').classList.toggle('warning', !canSave);
+  $('storage-note').hidden = canSave;
+  $('storage-note').textContent = canSave ? '' : 'Saving is unavailable. Keep this tab open to retain your progress.';
   if (celebrate && wins.some(line => !previousWins.has(winKey(line)))) {
     clearTimeout(celebrationTimer); $('celebration').hidden = false;
     celebrationTimer = setTimeout(() => { $('celebration').hidden = true; }, 4200);
@@ -58,14 +58,6 @@ function render(celebrate = false) {
   previousWins = new Set(wins.map(winKey));
 }
 render();
-
-$('reset').addEventListener('click', () => $('reset-dialog').showModal());
-$('reset-dialog').addEventListener('close', () => {
-  if ($('reset-dialog').returnValue !== 'reset') return;
-  checked.clear();
-  try { localStorage.removeItem(STORAGE_KEY); } catch { canSave = false; }
-  clearTimeout(celebrationTimer); $('celebration').hidden = true; render();
-});
 
 const publicUrl = 'https://kcgroulx.github.io/halloween-bingo/';
 $('share-url').value = publicUrl;

@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#c7322c">
-  <meta name="description" content="A little mischief. Five in a row. The 3951 Halloween party bingo card.">
+  <meta name="description" content="The 3951 Halloween party bingo card. Tap a deed when it’s done.">
   <title>3951 Halloween Bingo</title>
   <link rel="icon" href="./assets/bat.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./styles.css?v=6">
-  <script type="module" src="./app.js?v=5"></script>
+  <link rel="stylesheet" href="./styles.css?v=7">
+  <script type="module" src="./app.js?v=7"></script>
 </head>
 <body>
   <main class="invitation">
@@ -19,28 +19,26 @@
     <header>
       <div class="crest" aria-hidden="true"><span></span><img src="./assets/bat.svg" alt=""><span></span></div>
       <h1><span class="house">3951</span><span class="halloween">Halloween</span><span class="bingo">Bingo</span></h1>
-      <p class="tagline">A little mischief. Five in a row.</p>
+      <p class="tagline" id="instructions">Tap a deed when it’s done.</p>
     </header>
     <section class="game" aria-label="Your bingo card">
-      <p class="instructions" id="instructions">Tap a deed when it’s done. A row, column, or diagonal wins.</p>
       <div class="letters" aria-hidden="true"><span>B</span><span>I</span><span>N</span><span>G</span><span>O</span></div>
       <div id="board" class="board" aria-describedby="instructions"></div>
       <noscript><p>Enable JavaScript to play and save your bingo card.</p></noscript>
       <div class="progress" aria-live="polite" aria-atomic="true"><span id="deed-count">0 / 24 deeds done</span><span id="line-count">0 bingos</span></div>
       <div class="progress-track" aria-hidden="true"><div id="progress-fill"></div></div>
-      <p id="storage-note" class="storage-note">Your deeds are saved on this browser.</p>
+      <p id="storage-note" class="storage-note warning" role="status" hidden></p>
     </section>
     <footer>
-      <div class="actions"><button id="share" class="text-button" type="button">Share the invitation <span aria-hidden="true">↗</span></button><span aria-hidden="true">✦</span><button id="reset" class="text-button" type="button">Reset card</button></div>
-      <p class="fine-print">Play on the honor system. Dares are opt-in.<br>Any drink counts. A little kindness goes a long way.</p>
+      <div class="actions"><button id="share" class="text-button" type="button">Share the invitation <span aria-hidden="true">↗</span></button></div>
+      <section class="rules" aria-labelledby="rules-title">
+        <h2 id="rules-title">Rules</h2>
+        <ul><li>Have fun</li></ul>
+      </section>
       <p class="signoff">Happy Halloween.</p>
     </footer>
   </main>
   <div id="celebration" class="celebration" role="status" aria-live="polite" hidden><span aria-hidden="true">✦</span><strong>Beware… Bingo!</strong><span>A wickedly good line. Keep the mischief going.</span></div>
-  <dialog id="reset-dialog" aria-labelledby="reset-title">
-    <h2 id="reset-title">A fresh start?</h2><p>This clears your 24 deeds on this browser. Your card stays the same.</p>
-    <form method="dialog" class="dialog-actions"><button value="cancel">Keep my card</button><button value="reset" class="primary">Reset card</button></form>
-  </dialog>
   <dialog id="share-dialog" aria-labelledby="share-title">
     <button class="close" id="close-share" aria-label="Close sharing">×</button>
     <p class="eyebrow">The more, the scarier.</p><h2 id="share-title">Invite a little mischief.</h2>

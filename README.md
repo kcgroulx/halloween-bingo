@@ -24,7 +24,7 @@ Publish the root of `main` using Settings → Pages → Deploy from a branch. `.
 
 ## Browser data
 
-The only stored record is `3951-halloween-bingo:v1` in localStorage: `{ "version": 1, "checked": ["challenge-id"] }`. Reset only clears this record. If storage is blocked, the game works in memory and displays a notice. The site requires internet for its initial page load; offline reloads are not guaranteed. GitHub serves the files, but gameplay never sends progress to a server.
+The only stored record is `3951-halloween-bingo:v1` in localStorage: `{ "version": 1, "checked": ["challenge-id"] }`. Tap a checked square again to unmark it. If storage is blocked, the game works in memory and displays a notice. The site requires internet for its initial page load; offline reloads are not guaranteed. GitHub serves the files, but gameplay never sends progress to a server.
 
 ## Artwork
 
