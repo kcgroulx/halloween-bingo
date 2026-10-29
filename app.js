@@ -14,6 +14,7 @@ const winKey = line => line.join('-');
 const tiles = card.map((challenge, index) => {
   const tile = document.createElement(challenge.id === FREE ? 'div' : 'button');
   tile.className = 'tile';
+  tile.style.setProperty('--paper-position', `${-(index % 5) * 67}px ${-Math.floor(index / 5) * 67}px`);
   if (challenge.id === FREE) {
     tile.classList.add('free');
     tile.innerHTML = '<img src="./assets/bat.svg" alt=""><span>Free space</span><small>Wicked by nature</small>';

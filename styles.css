@@ -8,7 +8,7 @@ button { cursor: pointer; }
 button:focus-visible, a:focus-visible, input:focus-visible { outline: 3px solid var(--cream); outline-offset: 4px; }
 .invitation { isolation: isolate; position: relative; max-width: 780px; margin: auto; padding: 26px 62px 28px; background: var(--red); border: 1px solid #1b1714; box-shadow: 0 0 0 8px var(--red), 0 12px 50px #0005; }
 .invitation::before { content: ''; position: absolute; inset: 12px; border: 1px solid var(--ink); pointer-events: none; z-index: -1; }
-.invitation::after { content: ''; position: absolute; inset: 0; opacity: .12; background-image: var(--paper-grain); pointer-events: none; z-index: -1; mix-blend-mode: multiply; }
+.invitation::after { content: ''; position: absolute; inset: 0; opacity: .60; background-image: var(--paper-grain); background-size: 400px 400px; pointer-events: none; z-index: -1; mix-blend-mode: soft-light; }
 .corner { width: 78px; height: 78px; position: absolute; z-index: -1; pointer-events: none; }
 .top-left { top: 9px; left: 9px; }.top-right { top: 9px; right: 9px; transform: rotate(90deg); }.bottom-left { bottom: 9px; left: 9px; transform: rotate(-90deg); }.bottom-right { bottom: 9px; right: 9px; transform: rotate(180deg); }
 header { text-align: center; }
@@ -43,3 +43,8 @@ dialog { color: var(--ink); background: #e35b4b; border: 1px solid var(--ink); p
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation: none !important; transition: none !important; } }
 
 .challenge-detail { min-height: 2.8em; font-size: 13px; line-height: 1.4; margin: 12px 0 0; }
+
+/* Handmade paper, selected at 60% strength. Keep inked squares crisp. */
+.tile { isolation: isolate; }
+.tile::before { content: ''; position: absolute; inset: 0; z-index: -1; background-image: var(--paper-grain); background-size: 400px 400px; background-position: var(--paper-position, 0 0); opacity: .60; mix-blend-mode: soft-light; pointer-events: none; }
+.tile[aria-pressed='true']::before, .tile.free::before { display: none; }
