@@ -34,8 +34,8 @@ export const challenges = [
     "text": "Find someone with the same MBTI as you"
   },
   {
-    "id": "party-12",
-    "text": "Take a third shot??? (White Lightning)"
+    "id": "party-12-feed-shot",
+    "text": "Feed someone a shot"
   },
   {
     "id": "party-19",

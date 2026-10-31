@@ -1,4 +1,4 @@
-import { challenges } from './challenges.js?v=8';
+import { challenges } from './challenges.js?v=9';
 import { FREE, STORAGE_KEY, makeCard, winningLines, readProgress, serializeProgress } from './game.js';
 
 const card = makeCard(challenges);

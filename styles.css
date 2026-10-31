@@ -61,3 +61,7 @@ dialog { color: var(--ink); background: #e35b4b; border: 1px solid var(--ink); p
 
 /* Keep the selected full-length challenges inside square tiles on narrow phones. */
 @media (max-width: 359px) { .tile:not(.free) { font-size: 7px; line-height: 1.08; } }
+
+.tagline { line-height: 1.6; }
+#share { font-size: 18px; min-height: 56px; padding: 14px 24px; border: 1px solid var(--ink); max-width: 100%; }
+#share span { display: inline-block; margin-left: 6px; }
